@@ -17,7 +17,7 @@ def about():
 
 @app.get('/tasks/{task_id}/')
 def task(task_id):
-    if len(db_immitation) >= int(task_id):
+    if len(db_immitation) >= int(task_id) > 0:
         return db_immitation[int(task_id)-1]['text']
     else:
         return 'Запись не найдена'
