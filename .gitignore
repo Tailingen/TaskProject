@@ -2,3 +2,5 @@
 /tvenv
 /__pycache__
 /.idea
+tasks/__pycache__/
+test.db
