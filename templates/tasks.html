@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <h2>Ваши задачи</h2>
+        {% for task in task_list %}
+<a href="/tasks/{{ task.id }}"><p>{{ task.text }}</p></a>
+        {% endfor %}
+<br>
+<hr>
+<a href="create/">Создать задачу</a>
+{% endblock %}
+

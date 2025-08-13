@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Редактировать задачу:</h2>
+<form action="" method="post">
+  <p>Текст: <input type="text" name="text" value="{{ task_for_id.text }}"></p>
+  <p>Статус: <input type="checkbox" name="status" value="{{ task_for_id.status }}"></p>
+  <p><button>Редактировать</button></p>
+</form>
+{% endblock %}

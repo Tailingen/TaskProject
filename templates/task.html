@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="/tasks/"><<<вернуться</a>
+<h2>Задача</h2>
+{{ task_for_id.text }}
+<p><a href="update/">Редактировать</a> <a href="delete/">Удалить</a></p>
+
+{% endblock %}

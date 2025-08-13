@@ -7,13 +7,13 @@ async def read_task(task_id: int):
     async with engine.connect() as conn:
         query = select(TaskModel).filter(TaskModel.id == task_id)
         res = await conn.execute(query)
-    return list(res.first())
+    return res.first()
 
 async def read_tasks():
     async with engine.connect() as conn:
         query = select(TaskModel)
         res = await conn.execute(query)
-    return [list(i) for i in res.all()]
+    return res
 
 async def create_task(schema):
     async with engine.connect() as conn:

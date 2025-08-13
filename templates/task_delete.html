@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Вы уверены, что хотите удалить запись?
+<form action="" method="post">
+  <p><button>Да</button>
+    <a href="/tasks/{{ task_for_id.id }}">Отмена</a></p>
+</form>
+{% endblock %}
